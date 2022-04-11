@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="shortcut icon" href="#">
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet"  href="./style1.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>cart</title>
+  </head>
+  <body class="" >
+    <section id="header">
+        <a href="#"><img src="image/logo.png" style="height:70px;width:70px;" class="logo" alt=""></a>
+        <div>
+          <ul id="navbar">
+            <li class="nav-bar"><a class="link" href="index.html">Home</a></li>
+            <li class="nav-bar"><a class="link" href="#product">Electronics</a></li>
+            <li class="nav-bar"><a class="link" href="#">Groceries</a></li>
+            <li class="nav-bar"><a class="link" href="#fashion">Fashion</a></li>
+            <li class="nav-bar"><a class="link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </div>
+        <div class="drop-down">
+          <a class="link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="#" onclick="Toggle()"><i id="bar" class="fa-solid fa-bars"></i></a>
+        </div>
+      </section>
+        
+    <div  class= "r22">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                            
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="image/product/product-1.jpg" style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Puma</span>
+                                        <h5>Puma red T-shirt</h5>
+                                        <h4>$19</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item ">
+                                                <button class="page-link" onclick="decreaseNumber('textbox1','itemval1')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox1"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox1','itemval1')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval1">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                            
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="image/product/product-2.jpg"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>HrX</span>
+                                        <h5>HrX Sneakers</h5>
+                                        <h4>$9</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center  ">
+                                            <li class="page-item ">
+                                                <button class="page-link" onclick="decreaseNumber('textbox3','itemval3')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox3"></li>
+                                            <li class="page-item"> 
+                                                <button class="page-link" onclick="increaseNumber('textbox3','itemval3')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval3">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="image/product/product-3.jpg"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Zara</span>
+                                        <h5>Zara Trousers</h5>
+                                        <h4>$25</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox4','itemval4')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox4"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox4','itemval4')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval4">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="image/product/product-4.jpg"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <div class="des">
+                                        <span>Puma</span>
+                                        <h5>Puma Violet T-shirt</h5>
+                                        <h4>$19</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item ">
+                                                <button class="page-link" onclick="decreaseNumber('textbox5','itemval5')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox5"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox5','itemval5')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval5">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="image/product/product-5.jpg"  style="height: 200px;"  alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Adidas</span>
+                                        <h5>Adidas Sneakers</h5>
+                                        <h4>$12</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox6','itemval6')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox6"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox6','itemval6')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval6">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="image/product/product-6.jpg"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Puma</span>
+                                        <h5>Puma T-shirt</h5>
+                                        <h4>$19</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox7','itemval7')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox7"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox7','itemval7')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval7">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="image/product/product-7.jpg"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Hrx</span>
+                                        <h5>Hrx Socks</h5>
+                                        <h4>$5</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox8','itemval8')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox8"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox8','itemval8')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval8">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="image/product/product-8.jpg"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Fossil</span>
+                                        <h5>Fossil Wrist Watch</h5>
+                                        <h4>$25</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox9','itemval9')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox9"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox9','itemval9')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval9">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/r/h/z/apple-iphone-12-dummyapplefsn-original-imafwg8dqgncgbcb.jpeg?q=70"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Apple</span>
+                                        <h5>iPhone 12</h5>
+                                        <h4>$500</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox10','itemval10')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox10"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox10','itemval10')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval10">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="https://rukminim1.flixcart.com/image/416/416/kgiaykw0/mobile/3/x/e/apple-iphone-11-mhdc3hn-a-original-imafwqepx5yxwctc.jpeg?q=70"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Apple</span>
+                                        <h5>iPhone 11</h5>
+                                        <h4>$400</h4>
+                                      </div>
+                                      
+                                    </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox11','itemval11')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox11"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox11','itemval11')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval11">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="https://rukminim1.flixcart.com/image/416/416/ktketu80/mobile/s/n/i/iphone-13-mlpk3hn-a-apple-original-imag6vpyrhqjgqzw.jpeg?q=70"  style="height: 200px;"  alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Apple</span>
+                                        <h5>iPhone 13</h5>
+                                        <h4>$600</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox12','itemval2')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox12"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox12','itemval12')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval12">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="https://rukminim1.flixcart.com/image/416/416/k0lbdzk0pkrrdj/mobile/4/8/c/apple-iphone-xr-mryd2hn-a-original-imafbhywqyhvww9c.jpeg?q=70"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Apple</span>
+                                        <h5>iPhone Xr</h5>
+                                        <h4>$450</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox13','itemval13')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input 1type="text" name="" class="page-link" value="0" id="textbox13"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox13','itemval13')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval13">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="https://rukminim1.flixcart.com/image/416/416/kflftzk0/mobile/h/q/u/google-pixel-4a-ga02099-in-original-imafwyzmnfxzmv5q.jpeg?q=70"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Google</span>
+                                        <h5>Pixel 4a</h5>
+                                        <h4>$450</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox14','itemval14')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox14"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox14','itemval14')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval14">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="https://rukminim1.flixcart.com/image/416/416/kqqykcw0/mobile/j/5/7/galaxy-f22-sm-e225flbdins-samsung-original-imag4z99fp4qdfby.jpeg?q=70"  style="height: 200px;" alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Samsung</span>
+                                        <h5>Galaxy F22</h5>
+                                        <h4>$190</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox15','itemval15')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox15"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox15','itemval15')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval15">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="https://rukminim1.flixcart.com/image/416/416/kjx6tu80/mobile/a/p/6/oppo-reno5-pro-5g-cph2201-original-imafze4br6espea4.jpeg?q=70"  style="height: 200px;"  alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Oppo</span>
+                                        <h5>Reno Pro 5</h5>
+                                        <h4>$300</h4>
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox16','itemval16')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox16"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox16','itemval16')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval16">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4">
+                        <div class="row">
+                            <!-- card images div -->
+                            <div  class=" mx-auto  d-flex justify-content-center align-items-center ">
+                                <img src="https://rukminim1.flixcart.com/image/416/416/km2clu80/mobile/8/r/x/rog-phone-5-zs673ks-1a053in-asus-original-imagff5hufbu4eg5.jpeg?q=70" style="height: 200px;"  alt=""/>
+                            </div>
+                            <!-- cart product details -->
+                            <div class="  mt-2">
+                                <div class="row">
+                                    <!-- product name -->
+                                    <div class="des">
+                                        <span>Vivo</span>
+                                        <h5>Pro 5</h5>
+                                        <h4>$250</h4>
+                              
+                              
+                                      </div>
+                                    <!-- increase decrease -->
+                                    <div >
+                                        <ul class="pagination d-flex justify-content-center align-items-center ">
+                                            <li class="page-item">
+                                                <button class="page-link" onclick="decreaseNumber('textbox17','itemval17')"><i class="fas fa-minus"></i></button>
+                                            </li>
+                                            <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox17"></li>
+                                            <li class="page-item "> 
+                                                <button class="page-link" onclick="increaseNumber('textbox17','itemval17')"><i class="fas fa-plus"></i></button>
+                                            </li>
+                                            
+                                          </ul>
+                                    </div>
+                                </div>
+                                    <div>
+                                        <h2>Price: ₹ 499</h2>
+
+                                        <div class="">
+                                          <h3>Total :₹<span id="itemval17">0.00</span></h3>   
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+                        <div class="right-side p-3 ">
+                            <button class="r27 text-bold my-5" id="click11">Click to See Fare Break up</button>
+                          <div id="fare" class="r28">
+                             <h2 class="product_name mb-5">The Total Amount Of</h2>
+                            <div class="price_individual d-flex justify-content-between">
+                                <p>Product amount</p>
+                                <p>₹<span id="product_total_amt">0.00</span></p>
+                            </div>
+                            <div class="price_individual d-flex justify-content-between">
+                                <p>Shipping Charge</p>
+                                <p>₹<span id="shipping_charge">30.0</span></p>
+                            </div>
+                         </div>
+                            <div class="total-amt d-flex justify-content-between font-weight-bold">
+                                <p>Total amount (including GST)</p>
+                                <p>₹<span id="total_cart_amt">0.00</span></p>
+    
+                            </div>
+                            <div class="r26">
+                            <button class="btn  text-uppercase">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <script>
+        var total_cart_amt = document.getElementById('total_cart_amt');
+        var shipping_charge = document.getElementById('shipping_charge');
+        var product_total_amt = document.getElementById('product_total_amt');
+        var discountCode = document.getElementById('discount_code1');
+        const decreaseNumber = (incdec,itemprice) =>{
+            var itemval = document.getElementById(incdec);
+            var itemprice = document.getElementById(itemprice);
+            //console.log(itemval.value);
+            if(itemval.value<=0){
+                itemval.value=0;
+                alert('max one item');
+            }
+            else{
+                itemval.value=parseInt(itemval.value)-1;
+                itemval.style.background='#fff';
+                itemval.style.color="#000";
+                itemprice.innerHTML = parseInt(itemprice.innerHTML) -499;
+                product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) -499;
+                total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+            }
+        }
+        const increaseNumber = (incdec,itemprice) =>{
+            var itemval = document.getElementById(incdec);
+            var itemprice = document.getElementById(itemprice);
+            //console.log(itemval.value);
+            if(itemval.value>=10){
+                itemval.value=10;
+                alert('max 10 items');
+                itemval.style.background='red';
+                itemval.style.color="#fff";
+
+            }
+            else{
+                itemval.value=parseInt(itemval.value)+1;
+                itemprice.innerHTML = parseInt(itemprice.innerHTML) +499;
+                product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) +499;
+                total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+            }
+        }
+    </script> 
+    <script>
+        $(document).ready(function(){
+          $("#click11").click(function(){
+            $("#fare").toggle(3000);
+          });
+        });
+        </script>   
+  </body>
+</html>
